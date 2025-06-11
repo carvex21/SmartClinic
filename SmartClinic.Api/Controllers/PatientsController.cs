@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SmartClinic.Application.DTOs;
+using SmartClinic.Application.Mappings;
 using SmartClinic.Application.Services;
 
 namespace SmartClinic.Api.Controllers;
@@ -27,7 +29,7 @@ public class PatientsController : ControllerBase
     [HttpPost(Name = "CreatePatient")]
     public async Task<IActionResult> CreatePatient([FromBody] PatientDto patientDto)
     {
-        var result = await _patientsService.CreatePatient(patientDto.ToDomain());
+        var result = await _patientsService.CreatePatient(patientDto);
         _logger.LogInformation("Patient Created! Patient name: {patientName}", patientDto.FirstName);
         return Ok(result);
     }
@@ -43,7 +45,7 @@ public class PatientsController : ControllerBase
     public async Task<IActionResult> UpdatePatient(int id, [FromBody] PatientDto patientDto)
     {
         var result = await _patientsService.UpdatePatientAsync(id, patientDto);
-        _logger.LogInformation("Passenger Updated: {passengerName} {passengerLastName}", passengerDto.FirstName, passengerDto.LastName);
+        _logger.LogInformation("Patient Updated: {patientDto} {patientDto}", patientDto.FirstName, patientDto.LastName);
         return Ok(result);
     }
 }
