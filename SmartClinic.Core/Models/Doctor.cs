@@ -2,7 +2,7 @@
 
 public class Doctor
 {
-    public Doctor(int id, string firstName, string lastName, string specialty, string branchId)
+    public Doctor(int id, string firstName, string lastName, string specialty, int branchId)
     {
         Id = id;
         FirstName = firstName;
@@ -23,5 +23,5 @@ public class Doctor
 
     public string Specialty { get; }
 
-    public string BranchId { get; }
+    public int BranchId { get; }
 }

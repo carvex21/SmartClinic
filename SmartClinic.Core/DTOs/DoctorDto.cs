@@ -2,7 +2,7 @@
 
 public class DoctorDto
 {
-    public DoctorDto(int id, string firstName, string lastName, string specialty, string branchId)
+    public DoctorDto(int id, string firstName, string lastName, string specialty, int branchId)
     {
         Id = id;
         FirstName = firstName;
@@ -19,5 +19,5 @@ public class DoctorDto
 
     public string Specialty { get; }
 
-    public string BranchId { get; }
+    public int BranchId { get; }
 }

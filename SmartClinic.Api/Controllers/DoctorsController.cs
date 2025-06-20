@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SmartClinic.Core.DTOs;
 using SmartClinic.Core.Services;
-using SmartClinic.Core.Models;
 
 namespace SmartClinic.Api.Controllers;
 
@@ -22,7 +21,7 @@ public class DoctorsController : ControllerBase
     public async Task<IActionResult> GetDoctor(int id)
     {
         var doctorDto = await _doctorsService.GetDoctor(id);
-        _logger.LogInformation("Doctor Retrieved: {DoctorName} {DoctorLastName", doctorDto.FirstName, doctorDto.LastName);
+        _logger.LogInformation("Doctor Retrieved: {DoctorName} {DoctorLastName}", doctorDto.FirstName, doctorDto.LastName);
         return Ok(doctorDto);
     }
 
