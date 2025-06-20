@@ -8,6 +8,10 @@ public class Branch
         Location = location;
     }
 
+    protected Branch()
+    {
+    }
+
     public int Id { get; }
 
     public string Location { get; }
