@@ -1,4 +1,4 @@
-﻿namespace SmartClinic.Application.DTOs;
+﻿namespace SmartClinic.Core.DTOs;
 
 public class PatientDto
 {
@@ -9,12 +9,12 @@ public class PatientDto
         LastName = lastName;
         Email = email;
     }
-    
-    public int Id { get; set; }
-    
-    public string FirstName { get; set; }
 
-    public string LastName { get; set; }
+    public int Id { get; }
 
-    public string Email { get; set; }
+    public string FirstName { get; }
+
+    public string LastName { get; }
+
+    public string Email { get; }
 }

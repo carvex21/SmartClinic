@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SmartClinic.Application.DTOs;
-using SmartClinic.Application.Mappings;
-using SmartClinic.Application.Services;
+using SmartClinic.Core.DTOs;
+using SmartClinic.Core.Services;
 
 namespace SmartClinic.Api.Controllers;
 

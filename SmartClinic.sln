@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartClinic.Api", "SmartClinic.Api\SmartClinic.Api.csproj", "{B1A34926-884D-47DC-B376-92C51B7528DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartClinic.Application", "SmartClinic.Application\SmartClinic.Application.csproj", "{FEE2D906-D053-4A08-B242-998559636B37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartClinic.Core", "SmartClinic.Core\SmartClinic.Core.csproj", "{FEE2D906-D053-4A08-B242-998559636B37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartClinic.Infrastructure", "SmartClinic.Infrastructure\SmartClinic.Infrastructure.csproj", "{9A4E039D-0836-4E65-A2F6-6F0FD5158446}"
 EndProject

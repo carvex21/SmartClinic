@@ -1,7 +1,7 @@
-﻿using SmartClinic.Application.DTOs;
-using SmartClinic.Infrastructure.Models;
+﻿using SmartClinic.Core.DTOs;
+using SmartClinic.Core.Models;
 
-namespace SmartClinic.Application.Mappings;
+namespace SmartClinic.Core.Mappings;
 
 public static class PatientMappings
 {

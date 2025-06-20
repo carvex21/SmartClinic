@@ -1,6 +1,6 @@
-﻿using SmartClinic.Application.DTOs;
+﻿using SmartClinic.Core.DTOs;
 
-namespace SmartClinic.Application.Services;
+namespace SmartClinic.Core.Services;
 
 public interface IPatientsService
 {
