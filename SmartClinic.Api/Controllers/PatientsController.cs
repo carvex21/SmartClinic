@@ -21,7 +21,7 @@ public class PatientsController : ControllerBase
     public async Task<IActionResult> GetPatient(int id)
     {
         var patientDto = await _patientsService.GetPatient(id);
-        _logger.LogInformation("Patient Retrieved: {PatientName} {PatientLastName", patientDto.FirstName, patientDto.LastName);
+        _logger.LogInformation("Patient Retrieved: {PatientName} {PatientLastName}", patientDto.FirstName, patientDto.LastName);
         return Ok(patientDto);
     }
 

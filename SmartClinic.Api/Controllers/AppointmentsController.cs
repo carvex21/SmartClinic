@@ -3,6 +3,7 @@ using SmartClinic.Core.DTOs;
 using SmartClinic.Core.Services;
 
 namespace SmartClinic.Api.Controllers;
+
 [ApiController]
 [Route("[controller]")]
 public class AppointmentsController : ControllerBase
