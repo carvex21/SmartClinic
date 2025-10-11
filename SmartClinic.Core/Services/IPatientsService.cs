@@ -8,4 +8,5 @@ public interface IPatientsService
     Task<PatientDto> CreatePatient(PatientDto patientDto);
     Task<PatientDto?> DeletePatient(int id);
     Task<PatientDto?> UpdatePatientAsync(int id, PatientDto patientDto);
+    Task<List<PatientDto>> GetAllPatients();
 }

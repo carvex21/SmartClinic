@@ -17,7 +17,7 @@ public class DoctorsController : ControllerBase
         _doctorsService = doctorsService;
     }
 
-    [HttpGet("{id}", Name = "GetDoctorById")]
+    [HttpGet]
     public async Task<IActionResult> GetDoctor(int id)
     {
         var doctorDto = await _doctorsService.GetDoctor(id);
@@ -25,7 +25,7 @@ public class DoctorsController : ControllerBase
         return Ok(doctorDto);
     }
 
-    [HttpPost(Name = "CreateDoctor")]
+    [HttpPost]
     public async Task<IActionResult> CreateDoctor([FromBody] DoctorDto doctorDto)
     {
         var result = await _doctorsService.CreateDoctor(doctorDto);
@@ -33,14 +33,14 @@ public class DoctorsController : ControllerBase
         return Ok(result);
     }
 
-    [HttpDelete("{id}", Name = "DeleteDoctor")]
+    [HttpDelete]
     public async Task<IActionResult> DeleteDoctor(int id)
     {
         _logger.LogInformation("Doctor Deleted!");
         return Ok(await _doctorsService.DeleteDoctor(id));
     }
 
-    [HttpPut("{id}", Name = "UpdateDoctor")]
+    [HttpPut]
     public async Task<IActionResult> UpdateDoctor(int id, [FromBody] DoctorDto doctorDto)
     {
         var result = await _doctorsService.UpdateDoctorAsync(id, doctorDto);

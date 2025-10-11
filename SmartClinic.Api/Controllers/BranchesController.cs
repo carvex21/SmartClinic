@@ -17,7 +17,7 @@ public class BranchesController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet("id", Name = "GetBranchById")]
+    [HttpGet("id")]
     public async Task<IActionResult> GetBranchById(int branchId)
     {
         var branchDto = await _branchesService.GetBranch(branchId);
@@ -25,7 +25,7 @@ public class BranchesController : ControllerBase
         return Ok(branchDto);
     }
 
-    [HttpGet(Name = "GetBranches")]
+    [HttpGet]
     public async Task<IActionResult> GetBranches()
     {
         var branches = await _branchesService.GetAllBranches();
@@ -33,7 +33,7 @@ public class BranchesController : ControllerBase
         return Ok(branches);
     }
 
-    [HttpPost(Name = "CreateBranch")]
+    [HttpPost]
     public async Task<IActionResult> CreateBranch([FromBody] BranchDto branchDto)
     {
         var result = await _branchesService.CreateBranch(branchDto);
@@ -41,15 +41,15 @@ public class BranchesController : ControllerBase
         return Ok(result);
     }
 
-    [HttpPut(Name = "UpdateBranch")]
     public async Task<IActionResult> UpdateBranch([FromBody] BranchDto branchDto)
+    [HttpPut("id")]
     {
         var result = await _branchesService.UpdateBranch(branchDto);
         _logger.LogInformation("Branch updated");
         return Ok(result);
     }
 
-    [HttpDelete(Name = "DeleteBranch")]
+    [HttpDelete("id")]
     public async Task<IActionResult> DeleteBranch(int branchId)
     {
         var result = await _branchesService.DeleteBranch(branchId);

@@ -17,7 +17,7 @@ public class AppointmentsController : ControllerBase
         _appointmentsService = appointmentsService;
     }
 
-    [HttpPost("CreateAppointment")]
+    [HttpPost]
     public async Task<IActionResult> CreateAppointment([FromBody] AppointmentDto appointmentDto)
     {
         var result = await _appointmentsService.CreateAppointment(appointmentDto);

@@ -16,7 +16,7 @@ public class MedicalRecordController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet("{id}", Name = "GetMedicalRecordByPatientId")]
+    [HttpGet("{id}")]
     public async Task<IActionResult> GetMedicalRecord(int patientId)
     {
         var result = await _medicalRecordService.GetRecord();
