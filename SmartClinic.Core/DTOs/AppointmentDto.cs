@@ -2,12 +2,12 @@
 
 public class AppointmentDto
 {
-    public AppointmentDto(int id, int patientId, int doctorId, string status)
+    public AppointmentDto(int id, int patientId, int doctorId, DateTime date)
     {
         Id = id;
         PatientId = patientId;
         DoctorId = doctorId;
-        Status = status;
+        Date = date;
     }
 
     public int Id { get; }
@@ -16,5 +16,5 @@ public class AppointmentDto
 
     public int DoctorId { get; }
 
-    public string Status { get; }
+    public DateTime Date { get; }
 }
