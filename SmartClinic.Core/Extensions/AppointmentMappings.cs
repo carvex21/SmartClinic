@@ -1,7 +1,7 @@
 ﻿using SmartClinic.Core.DTOs;
 using SmartClinic.Core.Models;
 
-namespace SmartClinic.Core.Mappings;
+namespace SmartClinic.Core.Extensions;
 
 public static class AppointmentMappings
 {

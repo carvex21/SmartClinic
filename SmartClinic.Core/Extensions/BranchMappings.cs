@@ -1,7 +1,7 @@
 ﻿using SmartClinic.Core.Models;
 using SmartClinic.Core.DTOs;
 
-namespace SmartClinic.Core.Mappings;
+namespace SmartClinic.Core.Extensions;
 
 public static class BranchMappings
 {
