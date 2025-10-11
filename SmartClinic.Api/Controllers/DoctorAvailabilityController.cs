@@ -20,7 +20,7 @@ public class DoctorAvailabilityController : ControllerBase
         _doctorsService = doctorsService;
     }
 
-    [HttpGet("id")]
+    [HttpGet("{doctorId}")]
     public async Task<IActionResult> GetDoctorAvailability(int doctorId, [FromQuery] DateTime date)
     {
         var availability = await _doctorAvailabilityService.GetDoctorAvailability(doctorId, date);

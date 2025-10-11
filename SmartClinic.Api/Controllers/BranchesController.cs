@@ -17,7 +17,7 @@ public class BranchesController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet("id")]
+    [HttpGet("{branchId}")]
     public async Task<IActionResult> GetBranchById(int branchId)
     {
         var branchDto = await _branchesService.GetBranch(branchId);
@@ -41,15 +41,15 @@ public class BranchesController : ControllerBase
         return Ok(result);
     }
 
-    public async Task<IActionResult> UpdateBranch([FromBody] BranchDto branchDto)
-    [HttpPut("id")]
+    [HttpPut("{branchId}")]
+    public async Task<IActionResult> UpdateBranch(int branchId, [FromBody] BranchDto branchDto)
     {
-        var result = await _branchesService.UpdateBranch(branchDto);
+        var result = await _branchesService.UpdateBranch(branchId, branchDto);
         _logger.LogInformation("Branch updated");
         return Ok(result);
     }
 
-    [HttpDelete("id")]
+    [HttpDelete("{branchId}")]
     public async Task<IActionResult> DeleteBranch(int branchId)
     {
         var result = await _branchesService.DeleteBranch(branchId);
